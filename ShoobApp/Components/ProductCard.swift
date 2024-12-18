@@ -20,7 +20,7 @@ struct ProductCard: View {
                 VStack(alignment: .leading) {
                     Text(product.name)
                         .bold()
-                    Text("\(product.price)$")
+                    Text("$\(product.price)")
                         .font(.caption) // format for price with $
                 }
                 .padding()

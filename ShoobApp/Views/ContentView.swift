@@ -29,6 +29,7 @@ struct ContentView: View {
             .toolbar {
                 NavigationLink {
                     CartView() // redirect to the cart view
+                        .environmentObject(cartManager)
                 } label : {
                     // .count gets the number of products (array)
                     CartButton(numberOfProducts: cartManager.products.count)

@@ -10,15 +10,20 @@ import SwiftUI
 struct ProductCard: View {
     @EnvironmentObject var cartManager: CartManager
     
+    // https://sarunw.com/posts/how-to-resize-swiftui-image-and-keep-aspect-ratio/
     var product: Product
     var body: some View {
         ZStack(alignment: .topTrailing){
             ZStack(alignment: .bottom) {
                 Image(product.image)
                     .resizable()
-                    .cornerRadius(20)
+                    .scaledToFill()
                     .frame(width: 180)
-                    .scaledToFit()
+                    .clipped()
+                    .cornerRadius(20)
+                    .allowsHitTesting(false)
+                // the cropped image, blocks the buttons in main view
+                // .allowsHitTesting ignores the current view
                 VStack(alignment: .leading) {
                     Text(product.name)
                         .bold()

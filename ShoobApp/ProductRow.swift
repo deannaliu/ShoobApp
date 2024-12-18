@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// TODO: Implement duplicate item to show quantity?
 // This is the row of item in the cart when added
 struct ProductRow: View {
     @EnvironmentObject var cartManager: CartManager

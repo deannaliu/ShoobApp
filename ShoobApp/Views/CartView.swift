@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// TODO: perhaps add a coupon feature and out of stock ?
 struct CartView: View {
     @EnvironmentObject var cartManager: CartManager
     

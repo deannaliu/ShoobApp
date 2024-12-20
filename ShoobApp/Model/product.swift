@@ -7,6 +7,7 @@
 
 import Foundation
 
+// TODO: perhaps how much of the product in stock? is that on database?
 struct Product: Identifiable, Hashable {
     var id = UUID()
     var name: String

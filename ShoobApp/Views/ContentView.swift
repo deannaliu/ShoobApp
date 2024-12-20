@@ -55,15 +55,12 @@ struct ContentView: View {
                     }
                 }
             }
-        
         }
     }
 }
 
 // 'some' is an opaque type
 // Opaque types allow you to describe the expected return type without defining a concrete type.
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+#Preview {
+   ContentView()
 }

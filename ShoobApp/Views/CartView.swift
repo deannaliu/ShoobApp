@@ -45,9 +45,7 @@ struct CartView: View {
     }
 }
 
-struct CartView_Previews: PreviewProvider {
-    static var previews: some View {
-        CartView()
-            .environmentObject(CartManager())
-    }
+#Preview {
+    CartView()
+        .environmentObject(CartManager())
 }

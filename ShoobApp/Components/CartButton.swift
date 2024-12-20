@@ -27,8 +27,6 @@ struct CartButton: View {
     }
 }
 
-struct CartButton_Previews: PreviewProvider {
-    static var previews: some View {
-        CartButton(numberOfProducts: 1)
-    }
+#Preview {
+    CartButton(numberOfProducts: 1)
 }

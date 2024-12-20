@@ -52,9 +52,7 @@ struct ProductCard: View {
     }
 }
 
-struct ProductCard_Previews: PreviewProvider {
-    static var previews: some View {
-        ProductCard(product: productList[0])
-            .environmentObject(CartManager())
-    }
+#Preview {
+    ProductCard(product: productList[0])
+        .environmentObject(CartManager())
 }

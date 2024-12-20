@@ -12,6 +12,7 @@ import SwiftUI
 struct ProductRow: View {
     @EnvironmentObject var cartManager: CartManager
     var product: Product
+    var quantity: Int
     
     var body: some View {
         HStack(spacing: 20) {
@@ -28,6 +29,7 @@ struct ProductRow: View {
             
             Spacer()
             
+            Text("x\(quantity)")
             Image(systemName: "trash")
                 .foregroundColor(Color(hue: 1.0, saturation: 0.89, brightness: 0.835))
                 .onTapGesture {
@@ -40,7 +42,7 @@ struct ProductRow: View {
 
 struct ProductRow_Previews: PreviewProvider {
     static var previews: some View {
-        ProductRow(product: productList[3])
+        ProductRow(product: productList[3], quantity: 2)
             .environmentObject(CartManager())
     }
 }

@@ -32,7 +32,7 @@ struct ContentView: View {
                         .environmentObject(cartManager)
                 } label : {
                     // .count gets the number of products (array)
-                    CartButton(numberOfProducts: cartManager.products.count)
+                    CartButton(numberOfProducts: cartManager.products.values.reduce(0, +))
                 }
             }
         }

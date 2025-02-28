@@ -16,6 +16,7 @@ class CartManager: ObservableObject {
             products[product] = 1
         } else {
             // the ! is a force unwrap operator, it is to unwrap Optional
+            // so like instead of java optional.of
             products[product]! += 1
         }
         total += product.price
